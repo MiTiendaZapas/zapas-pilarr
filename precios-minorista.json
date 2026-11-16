@@ -1,8 +1,8 @@
 {
   "_ayuda": [
-    "Precios de Zapas.pilarr (tienda al público, una sola versión), sacados de la lista de revendedores de la tienda principal.",
-    "Por unidad: precio de la tienda principal + $10.000. Desde 5 pares (por mayor): precio por mayor de la tienda principal + $5.000. Desde 12 pares (docena): el mismo precio por mayor + $4.000.",
-    "Gana la PRIMERA regla que coincide, de arriba hacia abajo. Para cambiar un margen, sumar o restar en las tres listas (unit, wholesalePrice, dozenPrice)."
+    "Precios de Zapas.pilarr (tienda al público, una sola versión), a partir del precio de cada modelo en la tienda del proveedor (Vestite Piola).",
+    "Por unidad: precio del proveedor + $10.000 (las ojotas $35.000 y las Mind $37.000, fijos). Desde 5 pares: precio del proveedor + $5.000. Desde 12 pares (docena): precio del proveedor + $4.000.",
+    "Los precios de cada modelo están en 'overrides' (el código es el del proveedor, 16/11/2026). Un modelo NUEVO que todavía no esté ahí usa las listas de abajo: unidad $47.000, por mayor $42.000, docena $41.000 (ojotas y Mind con sus precios fijos). Si el proveedor cambia un precio, hay que actualizar 'overrides'."
   ],
   "wholesale": {
     "minPairs": 5,
@@ -11,238 +11,1128 @@
     "dozenLabel": "Llevando 12 o más pares"
   },
   "unit": {
-    "default": 53000,
+    "default": 47000,
     "rules": [
       {
-        "price": 47000,
+        "price": 37000,
         "startsWith": [
           "mind "
+        ],
+        "contains": [
+          "nike mind"
         ]
       },
       {
-        "price": 45000,
-        "contains": [
+        "price": 35000,
+        "category": [
           "ojotas"
-        ]
-      },
-      {
-        "price": 45000,
-        "contains": [
-          "niño",
-          "niños"
-        ]
-      },
-      {
-        "price": 53000,
-        "contains": [
-          "jordan low pink",
-          "jordan pink low"
-        ]
-      },
-      {
-        "price": 65000,
-        "contains": [
-          "jordan 11",
-          "retro 11 panda"
         ]
       }
     ]
   },
   "wholesalePrice": {
     "default": 42000,
-    "rules": [
-      {
-        "price": 40000,
-        "startsWith": [
-          "mind "
-        ]
-      },
-      {
-        "price": 36000,
-        "contains": [
-          "ojotas"
-        ]
-      },
-      {
-        "price": 47000,
-        "contains": [
-          "brillo"
-        ]
-      },
-      {
-        "price": 35000,
-        "contains": [
-          "niño",
-          "niños"
-        ]
-      },
-      {
-        "price": 44000,
-        "contains": [
-          "jordan low pink",
-          "jordan pink low"
-        ]
-      },
-      {
-        "price": 55000,
-        "contains": [
-          "jordan 11",
-          "retro 11 panda"
-        ]
-      },
-      {
-        "price": 47000,
-        "contains": [
-          "nike v5 blancas",
-          "nike v5 negras",
-          "nike v5 rosa",
-          "air jordan pipa gris",
-          "air jordan black",
-          "new balance 4000 negra",
-          "nb 4000 negra"
-        ]
-      },
-      {
-        "price": 47000,
-        "contains": [
-          "forum verde summer",
-          "jordan low 1 diamond",
-          "jordan diamond pipa blanca",
-          "jordan pink",
-          "adidas 2000",
-          "puma 180",
-          "campus",
-          "shox",
-          "tl1",
-          "v2k",
-          "haylan",
-          "samba tejida",
-          "samba brillitos",
-          "super star total black"
-        ]
-      },
-      {
-        "price": 46000,
-        "contains": [
-          "exclusivas white",
-          "negras medias",
-          "air force con medias"
-        ]
-      },
-      {
-        "price": 44000,
-        "contains": [
-          "samba classic",
-          "jordan low glister",
-          "jordan",
-          "retro 4",
-          "botitas",
-          "530",
-          "9060",
-          "abzorb",
-          "running",
-          "mind"
-        ]
-      }
-    ]
+    "rules": []
   },
   "dozenPrice": {
     "default": 41000,
-    "rules": [
-      {
-        "price": 39000,
-        "startsWith": [
-          "mind "
-        ]
-      },
-      {
-        "price": 35000,
-        "contains": [
-          "ojotas"
-        ]
-      },
-      {
-        "price": 46000,
-        "contains": [
-          "brillo"
-        ]
-      },
-      {
-        "price": 34000,
-        "contains": [
-          "niño",
-          "niños"
-        ]
-      },
-      {
-        "price": 43000,
-        "contains": [
-          "jordan low pink",
-          "jordan pink low"
-        ]
-      },
-      {
-        "price": 54000,
-        "contains": [
-          "jordan 11",
-          "retro 11 panda"
-        ]
-      },
-      {
-        "price": 46000,
-        "contains": [
-          "nike v5 blancas",
-          "nike v5 negras",
-          "nike v5 rosa",
-          "air jordan pipa gris",
-          "air jordan black",
-          "new balance 4000 negra",
-          "nb 4000 negra"
-        ]
-      },
-      {
-        "price": 46000,
-        "contains": [
-          "forum verde summer",
-          "jordan low 1 diamond",
-          "jordan diamond pipa blanca",
-          "jordan pink",
-          "adidas 2000",
-          "puma 180",
-          "campus",
-          "shox",
-          "tl1",
-          "v2k",
-          "haylan",
-          "samba tejida",
-          "samba brillitos",
-          "super star total black"
-        ]
-      },
-      {
-        "price": 45000,
-        "contains": [
-          "exclusivas white",
-          "negras medias",
-          "air force con medias"
-        ]
-      },
-      {
-        "price": 43000,
-        "contains": [
-          "samba classic",
-          "jordan low glister",
-          "jordan",
-          "retro 4",
-          "botitas",
-          "530",
-          "9060",
-          "abzorb",
-          "running",
-          "mind"
-        ]
-      }
-    ]
+    "rules": []
   },
-  "overrides": {}
+  "overrides": {
+    "vp-27147448-9435-521f-8ea0-95acce15eac6": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-3a4929dc-f436-4100-b551-9391dee646e2": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-a0ff9f30-2538-51b4-a194-f9c811f9627d": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-668607ca-1044-56dc-9006-b2ef941a6340": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-e388396e-c415-561f-a79b-8c592b871640": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-05b460cd-d6b9-5543-a402-69302c9dd08a": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-41b82379-614f-5fd4-9674-0ff246181a39": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-f3eda352-1d9c-4275-a9c3-1bd9d2415690": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-c1c0df5d-e298-4647-aac6-1908dcc69160": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-a3a68f34-dce3-4951-bd61-17cd769d345d": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-72362d8c-e5a6-4f38-a297-45239827e2b5": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-55bda4c3-818c-4aa2-b741-604687fac4a5": {
+      "unit": 49000,
+      "wholesale": 44000,
+      "dozen": 43000
+    },
+    "vp-940e330c-1b32-5d1a-be7c-96fff29e8028": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-ea18b556-f5af-5927-be62-0cc3fe975d67": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-6d09bfd9-fc40-5057-8df2-d1093432f92c": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-b5f78643-f4e3-5bf7-afc9-f260c86d16a5": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-2d2417c1-591a-575f-87c4-b49a1bcfcaf4": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-3a4562bb-bbd7-5334-a73e-5424409d109a": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-b2a323f4-8f6f-5a1f-aa27-a90eb32d1c74": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-18504ec4-0cee-487c-ba2a-e70e1b95bf81": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-e06e1695-d53c-414d-9667-90e0643ef6e4": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-523547f0-b2d2-4715-a95a-b2d69567a3f5": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-8091f880-0dc9-5786-b818-456396d36be9": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-561906bc-0cd3-44f8-b429-b14affc6cca4": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-5e723485-904c-4891-ad79-49588cc86696": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-929863fd-efa1-53b5-88cc-88b472e69d35": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-fdd56df4-37a6-5d1e-a2f4-d05a1017e821": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-267d73cc-1a19-50f3-b99d-4fff69de8752": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-9baf4977-bf41-436b-8e58-9f8b35ea1039": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-f96e19e8-b8f9-4762-9104-1af9920c1263": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-55169caa-78ae-49a7-99a3-fede29320a1b": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-4dd9db23-c5ff-46fd-906b-0f6a95c0a141": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-0245e408-f98b-4ed4-a517-e69c362e2763": {
+      "unit": 49000,
+      "wholesale": 44000,
+      "dozen": 43000
+    },
+    "vp-56ae2e25-0ebf-5f96-8ec9-629c85296cb4": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-2516b2be-61de-4427-89b5-f3b2a7f39fbb": {
+      "unit": 49000,
+      "wholesale": 44000,
+      "dozen": 43000
+    },
+    "vp-0b213d39-1250-50dc-af19-2efc8df32f52": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-2e451ee7-31b1-5737-a8bf-4f1ae1d81189": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-eb8b440c-9188-5e84-b254-78e88f211c36": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-a2f64843-5b45-557f-8275-022720173d08": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-fa06def7-c9a0-4968-ab3d-43dade4e4af6": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-c7c482b5-a0f7-41a9-809b-040a03312c44": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-62cda108-c650-57ba-9209-1e34e2cce200": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-568cdb2c-460d-47bc-a2a7-240e3697b499": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-b3ef230d-f401-4934-a94d-06b620eb7297": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-fefc4ac9-4a67-4b5c-b886-4ae9e1b8fd0e": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-75400383-42ae-5689-82f8-e81341b9dff2": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-725ef424-b95d-42d9-8d6d-a85fff2668c1": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-33c0c9d0-913d-5dc5-b954-4097e4a2b9cb": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-ab7138d0-bf04-4041-98b8-6003b753c5fd": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-b9dcd03f-4b89-58d2-b4b1-69d348b80717": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-c16234d2-7a29-4175-8d4e-7ee60a2d5954": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-aacfb72f-0e44-4a11-a219-bed9d61d2aa3": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-ee1eb40e-5e6c-4432-bcbd-8ca613e05756": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-29e2c4b7-1c1c-487c-bdd1-f8558a334839": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-54a85c06-166b-4206-abd2-358218df99c2": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-3d83b257-6bc3-4467-9d4d-348466ded7e2": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-e8aad1a9-c0b3-4dce-88f4-3a5054d22d4e": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-399898cf-bd57-4778-8ee3-6af455d73611": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-27c985ab-cb14-483f-9dcd-951bf3476502": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-2507b72d-171f-5dfe-ac2f-12d389115e8e": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-6c85260d-5ce8-4b88-b5b7-358141579ba5": {
+      "unit": 49000,
+      "wholesale": 44000,
+      "dozen": 43000
+    },
+    "vp-795c5e8d-eaed-4136-8e5d-a518431e336c": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-26dd53bb-6d4d-4be1-9deb-7162feec4e92": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-6f0b61f3-7e4e-5263-9822-05a8a644169b": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-494ee823-35de-46de-bcb4-80579e140517": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-8e920a9d-e980-4ad1-9303-c5c96befeae4": {
+      "unit": 49000,
+      "wholesale": 44000,
+      "dozen": 43000
+    },
+    "vp-4c44a9bb-cf43-41c5-8b9b-72f74e3e9798": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-b1bb2034-6401-5e19-b874-f60b0b4c340b": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-688bd0a9-9bb9-5e56-a911-7e0defa43e7f": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-2667c180-d0a0-41ca-9022-5c848ca4ef3d": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-1819b6c2-171e-4ffa-9c8a-ff5e0e3ed074": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-30ca1641-0192-5b23-8f51-f1bdc89e9167": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-48e24ac8-6d35-4da4-87ea-9bd4917c514c": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-12ac9377-77dc-4991-ab11-e900b81c1000": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-fd76648c-850f-4b76-902d-d4cc44b73c58": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-a6a5e3e5-9661-4fea-bc62-273ad79ba13d": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-920c35d2-2e1e-49f1-a428-737bfd236670": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-99697186-fdb7-41cf-b9a2-ca21bdbe87f7": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-053e8de1-0bfb-4749-ba90-fad41e36908e": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-07bf57bf-c6bf-4165-88ee-77728d21d61c": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-1f935e8e-794a-42c2-b6da-686944a7b9b0": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-b7d5de6f-f129-4654-b197-6dd95d605d9e": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-777d6c91-9b8d-5292-b4a3-fbd5e3cea822": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-445bd102-fb7d-45df-b57a-d4e6b24f7547": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-955d3e28-fc78-4feb-893f-3927c08239b3": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-aa0854ee-4807-4012-bd28-275bca2525e1": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-97192c57-f8c5-4ef9-934f-2b2bdd296d73": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-066f67a5-91bb-491e-b132-8c83cd9d1941": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-1d9bf13d-de0f-59cc-85fb-b276576d5b96": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-28820d85-51e7-4aa4-a463-d1cb2414979c": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-ad7e43f5-0de5-435b-9990-0f3726de3964": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-c8003b45-3111-56e0-af15-d22a4c330bff": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-09a12b47-f1a1-5e86-aa8c-af06c7a37f94": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-426f834b-55eb-42ad-9e23-ad74ba5977c1": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-19e972b3-7519-4c21-a34f-8a2a73499d14": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-ad336450-3254-5105-8d54-b180d7e26620": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-6a051190-7335-553e-9edf-e667b848eef8": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-84ff736e-bc34-5303-ae18-56d6330268c7": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-1e2f8cc9-071b-4463-9a92-d8f08b165707": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-c89792ef-9ef4-4b9b-b6b9-917060ef70f1": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-7c6dd3e3-427e-5a52-8a4f-4254ae85be68": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-02bc57c7-6094-52ce-938d-d301bf01ee0c": {
+      "unit": 37000,
+      "wholesale": 32000,
+      "dozen": 31000
+    },
+    "vp-04e1a0d3-14ee-5d86-b430-26894bd55643": {
+      "unit": 37000,
+      "wholesale": 32000,
+      "dozen": 31000
+    },
+    "vp-dbe85c51-2f0f-5929-a54e-9f8887a37290": {
+      "unit": 37000,
+      "wholesale": 33000,
+      "dozen": 32000
+    },
+    "vp-fdee56d7-791e-44b5-beeb-757dc9634bee": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-61f23d14-1bc7-5f76-a105-f25e8e2617ab": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-e1952472-3870-5b91-aac3-a1f2f2be1e56": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-a3ce8b54-9c3c-4b36-99e5-8680bf9ceb80": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-01f69b37-733d-442e-9d20-c146aa38aa90": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-79a9f9b6-9614-4043-911c-0ce94c61b549": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-1ef28433-22d4-4664-9689-fe3dcc9cc2b0": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-86a8225f-353b-4885-acd8-dfff3379cc04": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-c820a954-ed87-402a-8b6b-b894dba16d1c": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-46b4f2be-0fab-4fc2-8338-d8254418d304": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-a5f5dcff-c1ae-4bb9-be81-d493ce7c15d4": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-89fdb35b-f01a-4df8-a994-f6f1ad0b30c1": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-63f401cf-bd2a-4834-94c4-97ceafbe2b51": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-5ea2ad44-eaf6-48a8-866f-00e10c1c5005": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-bad46256-e531-4d41-bc04-a5a60872ceaf": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-88043810-ed23-41d4-9e28-82a34f6557b6": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-d625a1a6-78a0-4b80-a0ef-b10599df25dc": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-b0af683d-bc20-4358-91b5-16a80f78a3b2": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-d4b5d40e-0115-4230-896e-57dee425ef74": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-0604cbff-081b-432c-849c-66f91807820f": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-f18c685b-7083-44a7-aaea-5c693d8f5858": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-7e6acb0a-09e8-4591-beee-c7e24c2dc599": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-da0871fe-dd75-43aa-ab9d-482f199f8d4f": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-f7eff494-e52d-568f-b723-705aa669c3cb": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-3492f605-dfbd-595e-b379-44377d2e871c": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-7846d143-44c9-5b5a-a5c5-fe4cba410237": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-570023fc-f3c4-422c-90df-a0234403fd87": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-f95c574a-091c-582a-ba5d-b39ca8ac2c97": {
+      "unit": 37000,
+      "wholesale": 32000,
+      "dozen": 31000
+    },
+    "vp-0c7b8479-0185-4bf1-bbb5-ef70d65c7c9b": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-3b029835-65d1-4d94-90c9-530730c31433": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-899b6c95-e558-4e8e-ac9c-7f10bf482fc6": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-087d6879-a088-422b-b85d-96604470a1c3": {
+      "unit": 35000,
+      "wholesale": 23000,
+      "dozen": 22000
+    },
+    "vp-12cfa291-c9c9-48cc-8fa6-68b420aa14b6": {
+      "unit": 35000,
+      "wholesale": 23000,
+      "dozen": 22000
+    },
+    "vp-ba098308-ed91-4288-b783-71b77349b595": {
+      "unit": 35000,
+      "wholesale": 23000,
+      "dozen": 22000
+    },
+    "vp-5d5738d0-da19-465d-8fac-d23b5be13df6": {
+      "unit": 35000,
+      "wholesale": 23000,
+      "dozen": 22000
+    },
+    "vp-482a76ed-9930-4b25-9c2f-55807aa8ed9b": {
+      "unit": 35000,
+      "wholesale": 23000,
+      "dozen": 22000
+    },
+    "vp-f7111355-522e-4ae8-8f65-b9fa914a4e36": {
+      "unit": 35000,
+      "wholesale": 32000,
+      "dozen": 31000
+    },
+    "vp-742d2727-00cb-43b6-8cc3-700f26452d10": {
+      "unit": 35000,
+      "wholesale": 32000,
+      "dozen": 31000
+    },
+    "vp-61ce1584-fcc9-48f3-8b9e-21af2eaf418c": {
+      "unit": 35000,
+      "wholesale": 32000,
+      "dozen": 31000
+    },
+    "vp-6a1dac35-47ba-5578-8a87-3f4f85af599a": {
+      "unit": 35000,
+      "wholesale": 32000,
+      "dozen": 31000
+    },
+    "vp-4af9748a-a95b-52a2-9301-49131774fa37": {
+      "unit": 35000,
+      "wholesale": 32000,
+      "dozen": 31000
+    },
+    "vp-d82e6c15-9984-4d8c-8362-3a7d0be5a4bb": {
+      "unit": 35000,
+      "wholesale": 23500,
+      "dozen": 22500
+    },
+    "vp-f7a11320-06ea-4307-a407-25e06eb4347e": {
+      "unit": 35000,
+      "wholesale": 23500,
+      "dozen": 22500
+    },
+    "vp-ff6c58cb-2bda-44c8-9dda-96588e9ae4c8": {
+      "unit": 35000,
+      "wholesale": 23500,
+      "dozen": 22500
+    },
+    "vp-c869e2ab-5aba-40eb-9690-2e10b8a3d2be": {
+      "unit": 35000,
+      "wholesale": 23500,
+      "dozen": 22500
+    },
+    "vp-b9e2bef8-c080-42a5-a494-69e32de0e3b7": {
+      "unit": 35000,
+      "wholesale": 23500,
+      "dozen": 22500
+    },
+    "vp-cea11df3-70fe-42b7-bdf2-6d06a2f14d69": {
+      "unit": 35000,
+      "wholesale": 23500,
+      "dozen": 22500
+    },
+    "vp-ef6fafa4-7f64-460e-b339-8887e559817e": {
+      "unit": 35000,
+      "wholesale": 23500,
+      "dozen": 22500
+    },
+    "vp-78159607-4c0c-4898-86be-859a011cd5e6": {
+      "unit": 35000,
+      "wholesale": 23500,
+      "dozen": 22500
+    },
+    "vp-86cfadbc-41f8-4a92-be52-694434eefee0": {
+      "unit": 35000,
+      "wholesale": 23500,
+      "dozen": 22500
+    },
+    "vp-c35de575-2858-4631-8649-fe46bdcca6a8": {
+      "unit": 35000,
+      "wholesale": 23500,
+      "dozen": 22500
+    },
+    "vp-b3fe8af1-cae5-44d6-be90-c2758338afe0": {
+      "unit": 35000,
+      "wholesale": 23500,
+      "dozen": 22500
+    },
+    "vp-4c8b31cb-0f37-5423-b548-824307c0344d": {
+      "unit": 35000,
+      "wholesale": 32000,
+      "dozen": 31000
+    },
+    "vp-1c9da6ed-dc4d-491f-adb8-4a0a52c3cc53": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-b1e70695-f57f-43a5-a6df-2f6d349101f7": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-af38a8fe-bb07-50b4-bcac-28ec0b65e7e2": {
+      "unit": 49000,
+      "wholesale": 44000,
+      "dozen": 43000
+    },
+    "vp-cefa126e-b359-4a56-8c90-8900adb72a64": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-35a0ff34-51d0-5273-b793-c7a7133b0ea4": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-457acbca-85eb-421d-9616-01ca2b6d42fc": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-1577d8df-bf6b-4287-947d-89b1a67363a5": {
+      "unit": 49000,
+      "wholesale": 44000,
+      "dozen": 43000
+    },
+    "vp-64cc47fc-42b7-4cbf-b931-7a9fcad8ec24": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-c73fdc7b-010f-41ca-9366-770c2303bc73": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-433e3b02-886e-40a3-9e02-e23e13ade9aa": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-22627202-296c-41d7-ad04-33287761617f": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-89fbe03d-8233-4964-942d-f0a9835eeaf8": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-0b7f48a9-a71e-4f47-b475-3f4258ab7bdb": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-efd303d1-223f-4295-9a61-60f6ba1e297e": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-ab65cb85-7d9c-5676-a3e0-3def59b83139": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-20548bb0-dc16-5dea-9069-99202f4c72b6": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-80840767-4c23-5a2f-9527-b46091573491": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-184d0e3d-653f-457e-9247-fee3b13c7da4": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-15b7bc19-0c2a-5e54-96f8-1ac6719d6cb5": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-deebd391-7a87-400e-8f1e-7850ed1dc2a9": {
+      "unit": 37000,
+      "wholesale": 32000,
+      "dozen": 31000
+    },
+    "vp-b38bff61-2a83-47d3-82bc-d8f8df5eb77a": {
+      "unit": 37000,
+      "wholesale": 32000,
+      "dozen": 31000
+    },
+    "vp-941199dd-72c7-42a3-8b77-b0e7135007a4": {
+      "unit": 37000,
+      "wholesale": 32000,
+      "dozen": 31000
+    },
+    "vp-b4e2010e-540b-4fce-b72e-dbc3269f08b2": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-01a136cc-54f8-492e-b4c9-235909fa824f": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-e60bdf8c-e098-4ee0-88e7-408cf95efa8d": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-46456ae8-533e-5387-8b80-627837446e0c": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-373ce126-d086-40d7-993f-194b42a50a38": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-f642601f-aaf5-41e7-b1b1-ad28d2404c7e": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-63eed0a2-a16c-5c14-ac04-10dd62d0b4ec": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-628d67ab-44a2-4a7b-9d67-9541c7cd79ab": {
+      "unit": 55000,
+      "wholesale": 50000,
+      "dozen": 49000
+    },
+    "vp-13e3f7a9-ddf2-4e6a-997a-0e64f820d252": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-db6c88f1-baef-4565-9fa9-21266c92d6b5": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-d2b8c1a6-0605-4ac5-b962-f2404cd4237a": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-b4d56379-daab-5120-afd2-74d3f736a5df": {
+      "unit": 49000,
+      "wholesale": 44000,
+      "dozen": 43000
+    },
+    "vp-5f9e81b7-7bc5-5341-a9c1-8e4867f1377b": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-18124bd5-7ef6-4b8b-9c94-66988c35004d": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-dc786b5f-5d79-4796-96cc-d29fdbe9c0cd": {
+      "unit": 49000,
+      "wholesale": 44000,
+      "dozen": 43000
+    },
+    "vp-0ba46486-40f7-433b-816c-748638526823": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-d37039d0-e95a-55a1-8f1a-b63a903c3104": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-0578dd89-cfe1-503a-a55e-600b609897a2": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-8c97561d-45a1-4b29-83b5-5aae2c829841": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-a1ba5c4d-eb6a-4199-9b7d-728ad74cd88e": {
+      "unit": 49000,
+      "wholesale": 44000,
+      "dozen": 43000
+    },
+    "vp-c6a8e362-515c-50fc-b361-20306a20ff45": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-6abb5fdf-803b-4988-b3d6-7b78990d2c78": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-ef3ec9ad-9466-44c0-8ca3-38cd848c7651": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-aaf85aa1-f164-4fce-adf6-fe2670856dc9": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-b4ce6d12-d5ec-458a-b631-e45913c4c780": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    },
+    "vp-0375f887-f858-4269-88ac-4c9887ebc703": {
+      "unit": 46000,
+      "wholesale": 41000,
+      "dozen": 40000
+    },
+    "vp-fb4c853f-cf49-5339-b877-8b1844fe174e": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-31fa9eea-651b-5c9d-bc1e-c20a81267fcd": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-ede343a5-ee8d-4797-9808-8150e1c6dab2": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-996f3278-daf1-5a7c-ac34-7260b0603ec4": {
+      "unit": 49000,
+      "wholesale": 44000,
+      "dozen": 43000
+    },
+    "vp-5d25ed8b-d356-5e3c-a2eb-54e5a554ed46": {
+      "unit": 47000,
+      "wholesale": 42000,
+      "dozen": 41000
+    },
+    "vp-3e4d2d60-1502-4763-b186-9df9800c29b8": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-10d97e73-1658-57c0-ac50-a5b53048ff37": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-dbff3122-fcda-4be4-8250-2b5350f61eb0": {
+      "unit": 49000,
+      "wholesale": 44000,
+      "dozen": 43000
+    },
+    "vp-45ff8259-7fad-4f6b-a049-afd3ec2051ae": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-bbb88ee2-c8e3-44ad-a1ad-ce46e70428bd": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-69a6e9a1-941d-5627-9b81-37d504fbaa54": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-de32eb38-a2c5-4eaf-bae2-b0679c1e514c": {
+      "unit": 50000,
+      "wholesale": 45000,
+      "dozen": 44000
+    },
+    "vp-d00c17e9-02a7-54db-9f86-3f894c1e059c": {
+      "unit": 44000,
+      "wholesale": 39000,
+      "dozen": 38000
+    },
+    "vp-a8284c0a-1a75-5d0b-8c69-5455d51e2335": {
+      "unit": 43000,
+      "wholesale": 38000,
+      "dozen": 37000
+    }
+  }
 }

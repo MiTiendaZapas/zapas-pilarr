@@ -2,8 +2,10 @@
   "_ayuda": [
     "Precios de Zapas.pilarr (tienda al público, una sola versión), a partir del precio de cada modelo en la tienda del proveedor (Vestite Piola).",
     "Por unidad: precio del proveedor + $10.000 (las ojotas $35.000 y las Mind $37.000, fijos). Desde 5 pares: precio del proveedor + $5.000. Desde 12 pares (docena): precio del proveedor + $4.000.",
-    "Los precios de cada modelo están en 'overrides' (el código es el del proveedor, 16/11/2026). Un modelo NUEVO que todavía no esté ahí usa las listas de abajo: unidad $47.000, por mayor $42.000, docena $41.000 (ojotas y Mind con sus precios fijos). Si el proveedor cambia un precio, hay que actualizar 'overrides'."
+    "Los precios de cada modelo están en 'overrides' (el código es el del proveedor, 16/11/2026). Un modelo NUEVO que todavía no esté ahí usa las listas de abajo: unidad $47.000, por mayor $42.000, docena $41.000 (ojotas y Mind con sus precios fijos). Si el proveedor cambia un precio, hay que actualizar 'overrides'.",
+    "ownPricesFirst: lo que el cliente cambia en su panel (precio y precio por mayor de cada modelo) manda sobre 'overrides'; los modelos que no tocó siguen con lo de 'overrides'."
   ],
+  "ownPricesFirst": true,
   "wholesale": {
     "minPairs": 5,
     "dozenMin": 12,
